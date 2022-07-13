@@ -1,27 +1,43 @@
 {
+    // Telemetry
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
+    "telemetry.telemetryLevel": "off",
+
+    // Settings Editor
     "workbench.settings.editor": "json",
+    "workbench.settings.useSplitJSON": true,
+    "workbench.settings.openDefaultSettings": true,
+
+    // Editor Behaviour
     "editor.tabCompletion": "on",
     "editor.cursorBlinking": "smooth",
+    "editor.minimap.enabled": false,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
     "editor.acceptSuggestionOnCommitCharacter": false,
     "editor.acceptSuggestionOnEnter": "off",
     "files.trimTrailingWhitespace": true,
-    "workbench.enableExperiments": false,
-    "workbench.activityBar.visible": false,
-    "workbench.settings.useSplitJSON": true,
-    "problems.decorations.enabled": false,
     "editor.rulers": [
         80
     ],
+    "editor.dragAndDrop": false,
+    "editor.emptySelectionClipboard": false,
+
+    // Local File History
+    "workbench.localHistory.maxFileEntries": 100,
+    "workbench.localHistory.maxFileSize": 512,
+    "workbench.localHistory.mergeWindow": 60,
+
+    "workbench.enableExperiments": false,
+    "workbench.activityBar.visible": false,
+    "problems.decorations.enabled": false,
+
     "explorer.autoReveal": false,
     "[python]": {
         "editor.detectIndentation": false,
         "editor.tabSize": 4
     },
-    "editor.minimap.enabled": false,
     "gitlens.views.fileHistory.location": "gitlens",
     "gitlens.views.compare.location": "gitlens",
     "gitlens.views.search.location": "gitlens",
@@ -52,8 +68,8 @@
     "python.experiments.enabled": false,
     "python.analysis.logLevel": "Trace",
     "python.analysis.cachingLevel": "Library",
-    "python.downloadLanguageServer": false,
-    "python.languageServer": "Microsoft",
+    "python.downloadLanguageServer": true,
+    "python.languageServer": "Pylance",
     "extensions.ignoreRecommendations": false,
     "python.showStartPage": false,
     "files.hotExit": "onExitAndWindowClose",
@@ -68,12 +84,9 @@
     "go.buildOnSave": "package",
     "go.lintOnSave": "package",
     "go.vetOnSave": "off",
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
@@ -81,4 +94,11 @@
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "go.testFlags": [
+        "-v"
+    ],
 }
